@@ -25,9 +25,9 @@ Run the RUN_SETUP as administrator
 ## How it works
 
 The setup script registers a new Event Viewer Source, creates a scheduled task, and creates a 
-desktop shortcut to the userside ChangeVLAN.ps1 script.
+desktop shortcut to the ChangeVLAN.ps1 script.
 
-When the user executes the desktop shortcut it runs the powershell script with ExecutionPolicy bypass. 
+When the user executes the desktop shortcut it runs the ChangeVLAN.ps1 script with ExecutionPolicy bypass. 
 It scans for available ethernet interfaces and prompts the user to input the name of the interface and vlan ID they want configured.
 
 It then modifies the VLANConfig.json file to store that information and writes a message to 
