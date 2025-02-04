@@ -9,6 +9,9 @@ Version 0.4
 The goal of this tool is to allow standard windows users the ability to change the vlan on an ethernet NIC without administrator intervention. The user would typically be a member of the local windows group Network Configuration Operators allowing them to change other NIC configuration items, but vlan configuration is under the NIC device properties which requires administrator privileges.
 
 ## Tested Compatibility
+
+This tool should work on most Windows 10/11 versions but have only been directly tested on the below and newer:
+
 Windows 11 24H2 w/Powershell 5.1
 
 ## Setup Instructions
