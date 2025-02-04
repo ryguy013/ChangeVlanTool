@@ -13,8 +13,8 @@ Windows 11 24H2 w/Powershell 5.1
 
 ## Setup Instructions
 
-The following is the directory referenced by the scripts and is where all files should be located.
-C:\ProgramData\AutoPilotConfig\ChangeVlanTool
+Download all files and place them in the directory: C:\ProgramData\AutoPilotConfig\ChangeVlanTool
+This is the file path referenced by the scripts and is where all files should be located.
 
 Log in as the user who needs Change VLAN capability. 
 Run the RUN_SETUP as administrator
@@ -45,13 +45,13 @@ Add error handling/logging to event viewer.
 Would reseting the vlan property be better when entering 0?
 Reset-NetAdapterAdvancedProperty -Name $adapterName -DisplayName "VLAN ID"
 
-Version 0.5 Goals/ideas
 Test failure modes, bad input, etc.
 
 Test how long the "VLAN configuration initiating" pause needs to be, or if we should just validate 
 the change has happened and error if it doesn't work after x seconds.
 
-SetupScript
+SetupScript:
+
 Should I make a config file for the setup script to pull from so others can configure it easier for other environments?
 This would include file paths, event log source, XML content, etc.
 
