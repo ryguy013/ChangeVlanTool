@@ -2,11 +2,13 @@
 A powershell tool that allows none admins to change the VLAN on ethernet interfaces.
 
 
-Version 0.4
+Version 0.4.0-alpha
 
 ## What does this tool do?
 
 The goal of this tool is to allow standard windows users the ability to change the vlan on an ethernet NIC without administrator intervention. The user would typically be a member of the local windows group Network Configuration Operators allowing them to change other NIC configuration items, but vlan configuration is under the NIC device properties which requires administrator privileges.
+
+I made this for field technicians that may need to change their VLAN for troubleshooting/equipment setup but aren't administrators on their computers, or where they won't have network access to use JIT access to request permission.
 
 ## Tested Compatibility
 
@@ -21,6 +23,8 @@ This is the file path referenced by the scripts and is where all files should be
 
 Log in as the user who needs Change VLAN capability. 
 Run the RUN_SETUP as administrator
+
+Add the user to the local group "Network Configuration Operators".
 
 ## How it works
 
@@ -54,6 +58,8 @@ Test how long the "VLAN configuration initiating" pause needs to be, or if we sh
 the change has happened and error if it doesn't work after x seconds.
 
 SetupScript:
+
+Automatically add user to Network Configuration Operators
 
 Should I make a config file for the setup script to pull from so others can configure it easier for other environments?
 This would include file paths, event log source, XML content, etc.
